@@ -1,7 +1,9 @@
+// PRAKTIKUM 2 - validasi params & query
 import { Elysia, t } from "elysia";
+import { openapi } from "@elysiajs/openapi";
 
 const app = new Elysia()
-
+  .use(openapi())
   .get(
     "/products/:id",
     ({ params, query }) => {
@@ -22,7 +24,6 @@ const app = new Elysia()
       })
     }
   )
-
   .listen(3000);
 
 console.log("Server running at http://localhost:3000");

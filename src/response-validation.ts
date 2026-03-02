@@ -1,12 +1,15 @@
+// PRAKTIKUM 3 - validasi response
 import { Elysia, t } from "elysia";
+import { openapi } from "@elysiajs/openapi";
 
 const app = new Elysia()
+  .use(openapi())
 
   .get(
     "/stats",
     () => {
       return {
-        total: 100,
+        total: 275,
         active: 75
       };
     },

@@ -2,6 +2,7 @@ import { Elysia, t } from "elysia";
 import { openapi } from "@elysiajs/openapi";
 
 const app = new Elysia()
+// PRAKTIKUM 1 - validasi request body
   .use(openapi())
   .post("/request",
     ({ body }) => {
@@ -14,7 +15,7 @@ const app = new Elysia()
       body: t.Object({
         name: t.String({ minLength: 3 }),
         email: t.String({ format: "email" }),
-        age: t.Number({ minimum: 18 })
+        age: t.Number({ minimum: 19 })
       })
     }
   )
