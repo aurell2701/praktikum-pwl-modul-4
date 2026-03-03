@@ -12,7 +12,7 @@ new Elysia()
         authorization: t.String()
       }),
       beforeHandle({ headers, set }) {
-        if (headers.authorization !== "Bearer 123") {
+        if (headers.authorization !== "gxiren 123") {
           set.status = 401;
           return {
             success: false,
