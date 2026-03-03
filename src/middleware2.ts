@@ -14,8 +14,8 @@ const app = new Elysia()
   })
 
   .get("/product", () => ({
-    id: 4,
-    name: "Earbud"
+    id: 10,
+    name: "Portable Lamp"
   }))
 
   .listen(3000);
